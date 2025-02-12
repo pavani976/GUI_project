@@ -4,7 +4,7 @@ import java.awt.event.ActionListener;
 import java.awt.event.WindowAdapter;
 import java.awt.event.WindowEvent;
 
-public class pro {
+public class submit_form {
     void simple() {
         Frame f = new Frame("Personal Details :");
 
@@ -42,7 +42,7 @@ public class pro {
                 System.out.println(age.getText());
             }
         };*/
-        buttonlistener sub=new buttonlistener(email,pass,age);
+        form sub=new form(email,pass,age);
         bt.addActionListener(sub);
 
         f.addWindowListener(new WindowAdapter() {
@@ -57,15 +57,15 @@ public class pro {
 
     }
     public static void main(String[] args){
-        pro p=new pro();
+        submit_form p=new submit_form();
         p.simple();
     }
 }
-class buttonlistener implements ActionListener{
+class form implements ActionListener{
     TextField email;
     TextField pass;
     TextField age;
-    buttonlistener(TextField email,TextField pass,TextField age){
+    form(TextField email,TextField pass,TextField age){
         this.email=email;
         this.pass=pass;
         this.age=age;
